@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 
@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onScrollToProjects }: HeroProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -18,19 +18,19 @@ export default function Hero({ onScrollToProjects }: HeroProps) {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeInOut" as const },
     },
   }
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background gradient with yellow glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/80">
+      <div className="absolute inset-0 bg-linear-to-br from-background via-background to-background/80">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent/3 rounded-full blur-3xl" />
       </div>
@@ -54,7 +54,9 @@ export default function Hero({ onScrollToProjects }: HeroProps) {
         </motion.p>
 
         <motion.div variants={itemVariants} className="mb-12">
-          <p className="text-lg md:text-xl text-accent font-semibold rethink-sans-font-600 ">Cloud & DevOps Engineer</p>
+          <p className="text-lg md:text-xl text-accent font-semibold rethink-sans-font-600">
+            Cloud & DevOps Engineer
+          </p>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -62,25 +64,24 @@ export default function Hero({ onScrollToProjects }: HeroProps) {
             onClick={onScrollToProjects}
             className="bg-accent text-background rethink-sans-font-700 hover:bg-accent/90 px-10 py-6 text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
           >
-            View My Work    
+            View My Work
             <ArrowDown className="ml-2 w-4 h-4" />
           </Button>
           <a href="#contact">
-
-          <Button
-            variant="outline"
-            className="border-accent/30 w-full text-foreground rethink-sans-font-700 hover:bg-accent/10 hover:text-white px-10 py-6 text-base font-semibold rounded-lg bg-transparent"
+            <Button
+              variant="outline"
+              className="border-accent/30 w-full text-foreground rethink-sans-font-700 hover:bg-accent/10 hover:text-white px-10 py-6 text-base font-semibold rounded-lg bg-transparent"
             >
-            Get in Touch
-          </Button>
-              </a>
+              Get in Touch
+            </Button>
+          </a>
         </motion.div>
       </motion.div>
 
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-8 left-1/2 bg-yellow-500 p-4 rounded-full  transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 bg-yellow-500 p-4 rounded-full transform -translate-x-1/2"
       >
         <ArrowDown className="w-6 h-6 text-white" />
       </motion.div>
