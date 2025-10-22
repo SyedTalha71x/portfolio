@@ -34,25 +34,27 @@ export default function Story() {
           </motion.h2>
 
           <div className="space-y-6 text-lg rethink-sans-font-600 text-foreground/80 leading-relaxed">
-            <motion.p variants={itemVariants}>
-              I'm a passionate Cloud & DevOps Engineer with a deep love for building scalable, reliable infrastructure.
-              My journey in tech started with a curiosity about how systems work at scale, and it has evolved into a
-              career dedicated to automating, optimizing, and securing cloud environments.
-            </motion.p>
+  <motion.p variants={itemVariants}>
+    I'm a dedicated Cloud & DevOps Engineer with a strong foundation in backend development. With over 2 years of
+    professional experience as a Software Engineer (Backend), I’ve built, optimized, and maintained scalable systems
+    that sparked my deeper interest in automation and cloud infrastructure.
+  </motion.p>
 
-            <motion.p variants={itemVariants}>
-              Over the years, I've worked with cutting-edge technologies like Kubernetes, Docker, Terraform, and various
-              cloud platforms. I believe in the power of infrastructure as code and continuous integration/deployment to
-              deliver value faster and more reliably. My passion lies in solving complex problems and mentoring others
-              in the DevOps space.
-            </motion.p>
+  <motion.p variants={itemVariants}>
+    During my backend journey, I had the opportunity to collaborate on several DevOps projects — managing CI/CD
+    pipelines, containerizing applications, and deploying services to cloud environments. Those experiences inspired
+    my transition into a full-time DevOps and Cloud role, where I now focus on building secure, scalable, and
+    automated infrastructure using tools like Kubernetes, Docker, Terraform, and modern cloud platforms.
+  </motion.p>
 
-            <motion.p variants={itemVariants}>
-              When I'm not working on infrastructure challenges, you'll find me exploring new technologies, contributing
-              to open-source projects, or sharing knowledge with the community. I'm always excited about the
-              intersection of development and operations, and how we can build better systems together.
-            </motion.p>
-          </div>
+  <motion.p variants={itemVariants}>
+    I’m deeply passionate about Infrastructure as Code, automation, and continuous delivery. My goal is to create
+    systems that are efficient, reliable, and easy to maintain. Currently, I’m seeking exciting opportunities where I
+    can contribute to innovative DevOps initiatives, solve complex infrastructure challenges, and continue growing
+    as an engineer.
+  </motion.p>
+</div>
+
         </motion.div>
       </div>
     </section>
